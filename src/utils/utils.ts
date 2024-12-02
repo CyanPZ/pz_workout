@@ -234,34 +234,34 @@ const geoJsonForMap = (): FeatureCollection<RPGeometry> => ({
 })
 
 const getActivitySport = (act: Activity): string => {
-  if (act.type === 'Run') {
-    if (act.subtype === 'generic') {
-      const runDistance = act.distance / 1000;
-      if (runDistance > 20 && runDistance < 40) {
-        return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
-      } else if (runDistance >= 40) {
-        return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
-      }
-      return ACTIVITY_TYPES.RUN_GENERIC_TITLE;
-    }
-    else if (act.subtype === 'trail') return ACTIVITY_TYPES.RUN_TRAIL_TITLE;
-    else if (act.subtype === 'treadmill') return ACTIVITY_TYPES.RUN_TREADMILL_TITLE;
-    else return ACTIVITY_TYPES.RUN_GENERIC_TITLE;
-  }
-  else if (act.type === 'hiking') {
-    return ACTIVITY_TYPES.HIKING_TITLE;
-  }
-  else if (act.type === 'cycling') {
-    return ACTIVITY_TYPES.CYCLING_TITLE;
-  }
-  else if (act.type === 'walking') {
-    return ACTIVITY_TYPES.WALKING_TITLE;
-  }
-  // if act.type contains 'skiing'
-  else if (act.type.includes('skiing')) {
-    return ACTIVITY_TYPES.SKIING_TITLE;
-  }
-  return "";
+  // if (act.type === 'Run') {
+  //   if (act.subtype === 'generic') {
+  //     const runDistance = act.distance / 1000;
+  //     if (runDistance > 20 && runDistance < 40) {
+  //       return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
+  //     } else if (runDistance >= 40) {
+  //       return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
+  //     }
+  //     return ACTIVITY_TYPES.RUN_GENERIC_TITLE;
+  //   }
+  //   else if (act.subtype === 'trail') return ACTIVITY_TYPES.RUN_TRAIL_TITLE;
+  //   else if (act.subtype === 'treadmill') return ACTIVITY_TYPES.RUN_TREADMILL_TITLE;
+  //   else return ACTIVITY_TYPES.RUN_GENERIC_TITLE;
+  // }
+  // else if (act.type === 'hiking') {
+  //   return ACTIVITY_TYPES.HIKING_TITLE;
+  // }
+  // else if (act.type === 'cycling') {
+  //   return ACTIVITY_TYPES.CYCLING_TITLE;
+  // }
+  // else if (act.type === 'walking') {
+  //   return ACTIVITY_TYPES.WALKING_TITLE;
+  // }
+  // // if act.type contains 'skiing'
+  // else if (act.type.includes('skiing')) {
+  //   return ACTIVITY_TYPES.SKIING_TITLE;
+  // }
+  return act.name;
 }
 
 const titleForRun = (run: Activity): string => {

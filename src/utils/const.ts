@@ -55,7 +55,7 @@ const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
   return `我用 App 记录自己运动 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
 };
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `Running Journey with ${yearLength} Years, the table shows year ${year} data`;
+  `Sports Journey with ${yearLength} Years, the table shows year ${year} data`;
 
 // not support English for now
 const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
